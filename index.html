@@ -9,7 +9,118 @@
         <link rel="stylesheet" href="CSS/all.min.css">
     </head>
     <body>
+        <div id="expenseModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Add Expense</h2>
+                <label for="description">Description:</label>
+                <input type="text" id="description" placeholder="e.g., Coffee">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" placeholder="e.g., 5.00">
+                <button type="submit" onclick="submitExpense()">Add Expense</button>
+            </div>
+        </div>
         
+        <h1>Weekly Expense Tracker</h1>
+        <div class="refresh">
+            <button onclick="reset()">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </button>
+        </div>
+        <div class="container">
+            <div class="week">
+              <div class="day" id="saturday">
+                <h2>Saturday</h2>
+                <ul class="expenses-list"></ul>
+                <button onclick="addExpense('saturday')">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="total" id="total">
+                    <h3>Total = </h3>
+                    <h3 id="totalSum"></h3>
+                    <h3>$</h3>
+                </div>
+              </div>
+              
+              <div class="day" id="sunday">
+                <h2>Sunday</h2>
+                <ul class="expenses-list"></ul>
+                <button onclick="addExpense('sunday')">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="total" id="total">
+                    <h3>Total = </h3>
+                    <h3 id="totalSum"></h3>
+                    <h3>$</h3>
+                </div>
+              </div>
+              
+              <div class="day" id="monday">
+                <h2>Monday</h2>
+                <ul class="expenses-list"></ul>
+                <button onclick="addExpense('monday')">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="total" id="total">
+                    <h3>Total = </h3>
+                    <h3 id="totalSum"></h3>
+                    <h3>$</h3>
+                </div>
+              </div>
+              
+              <div class="day" id="tuesday">
+                <h2>Tuesday</h2>
+                <ul class="expenses-list"></ul>
+                <button onclick="addExpense('tuesday')">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="total" id="total">
+                    <h3>Total = </h3>
+                    <h3 id="totalSum"></h3>
+                    <h3>$</h3>
+                </div>
+              </div>
+              
+              <div class="day" id="wednesday">
+                <h2>Wednesday</h2>
+                <ul class="expenses-list"></ul>
+                <button onclick="addExpense('wednesday')">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="total" id="total">
+                    <h3>Total = </h3>
+                    <h3 id="totalSum"></h3>
+                    <h3>$</h3>
+                </div>
+              </div>
+              
+              <div class="day" id="thursday">
+                <h2>Thursday</h2>
+                <ul class="expenses-list"></ul>
+                <button onclick="addExpense('thursday')">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="total" id="total">
+                    <h3>Total = </h3>
+                    <h3 id="totalSum"></h3>
+                    <h3>$</h3>
+                </div>
+              </div>
+              
+              <div class="day" id="friday">
+                <h2>Friday</h2>
+                <ul class="expenses-list"></ul>
+                <button onclick="addExpense('friday')">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="total" id="total">
+                    <h3>Total = </h3>
+                    <h3 id="totalSum"></h3>
+                    <h3>$</h3>
+                </div>
+              </div>
+            </div>        
+        </div>
         
         <script src="js.js"></script>
     </body>
